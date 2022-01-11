@@ -19,9 +19,12 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
+if(votingAge >= 18){
+  console.log(true);
+}
 
-
-
+console.log(votingAge);
 /*
 Task 1b - Values
 
@@ -33,8 +36,12 @@ Do the following:
    HINT: no function required
 */
 
-
-
+let variable1 = 1;
+let variable2 = 2;
+if(variable2 === 2){
+  variable1 = 2;
+}
+console.log(variable1);
 
 
 /*
