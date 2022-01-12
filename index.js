@@ -21,10 +21,11 @@ Do the following:
 */
 const votingAge = 18;
 if(votingAge >= 18){
-  console.log(true);
+  console.log('task 1 a:', true);
+}else{
+  console.log('task 1 a:', false);
 }
 
-console.log(votingAge);
 /*
 Task 1b - Values
 
@@ -54,7 +55,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const year = "1999";
+console.log(parseInt(year));
 
 
 
@@ -83,11 +85,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(years){
+  return years * 7;
 }
 
-
+console.log(dogYears(2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -116,10 +118,24 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(weight <= 5 && age >= 1){
+    return weight * .05;
+  }else if(weight >= 6 && weight <= 10 && age >= 1){
+    return weight * .04;
+  }else if(weight >= 11 && weight <= 15 && age >= 1){
+    return weight * .03;
+  }else if(weight > 15 && age >= 1){
+    return weight * .02;
+  }else if(age >= .333 && age < .583){
+    return weight * .05;
+  }else if(age >= .583 && age < 1){
+    return weight * .04;
+  }else if(age < .333){
+    return weight * .1;
 }
-
+}
+console.log(hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -145,11 +161,35 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.random();
+
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = 'paper';
+}else if(computer > 0.67){
+  computer = 'scissors';
 }
 
+function game(user, computer){
+  if(computer === user){
+    return `it's a tie`;
+  }else if(computer = 'rock' && user === 'paper'){
+    return `you win!`;
+  }else if(computer = 'rock' && user === 'scissors'){
+    return `you lose!`;
+  }else if(computer = 'paper' && user === 'rock'){
+    return `you lose!`;
+  }else if(computer = 'paper' && user === 'scissors'){
+    return `you win!`;
+  }else if(computer = 'scissors' && user === 'paper'){
+    return `you lose!`;
+  }else if(computer = 'scissors' && user === 'rock'){
+    return `you win!`
+  }
+}
 
+console.log(game('rock', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
